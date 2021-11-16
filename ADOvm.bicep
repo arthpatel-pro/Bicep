@@ -6,6 +6,12 @@ param disksku string
 param ostype string
 param diskname string
 
+param VSTSAccountUrl string = "https://dev.azure.com/Ani007"
+param TeamProject string = "HTTP to Https redirection testing"
+param DeploymentGroup string = "Testing"
+param AgentName string = ''
+param PATToken string = "ggzgth3mm7qhk3o7ypubgtqqlut5vk7xbgitqlyuzowmystimska"
+
 
 
 resource vm 'Microsoft.Compute/virtualMachines@2021-03-01' = {
@@ -53,5 +59,24 @@ resource vm 'Microsoft.Compute/virtualMachines@2021-03-01' = {
   }
 }
 
-
+resource vmName_TeamServicesAgent 'Microsoft.Compute/virtualMachines/extensions@2015-06-15' = {
+  name: '${vmName}/TeamServicesAgent'
+  location: resourceGroup().location
+  properties: {
+    publisher: 'Microsoft.VisualStudio.Services'
+    type: 'TeamServicesAgent'
+    typeHandlerVersion: '1.0'
+    autoUpgradeMinorVersion: true
+    settings: {
+      VSTSAccountUrl: VSTSAccountUrl
+      TeamProject: TeamProject
+      DeploymentGroup: DeploymentGroup
+      AgentName: AgentName
+      Tags: Tags
+    }
+    protectedSettings: {
+      PATToken: PATToken
+    }
+  }
+}
 
