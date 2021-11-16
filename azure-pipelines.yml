@@ -12,7 +12,7 @@ variables:
   azureServiceConnection: 'ADO'
   resourceGroupName: 'ADO'
   location: 'ADO'
-  templateFile: './ADOVnet.bicep'
+  templateFile: './main.bicep'
 pool:
   vmImage: $(vmImageName)
 
