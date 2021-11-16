@@ -6,11 +6,11 @@ param disksku string
 param ostype string
 param diskname string
 
-param VSTSAccountUrl string = "https://dev.azure.com/Ani007"
-param TeamProject string = "HTTP to Https redirection testing"
-param DeploymentGroup string = "Testing"
+param VSTSAccountUrl string = 'https://dev.azure.com/Ani007'
+param TeamProject string = 'HTTP to Https redirection testing'
+param DeploymentGroup string = 'Testing'
 param AgentName string = ''
-param PATToken string = "ggzgth3mm7qhk3o7ypubgtqqlut5vk7xbgitqlyuzowmystimska"
+param PATToken string = 'ggzgth3mm7qhk3o7ypubgtqqlut5vk7xbgitqlyuzowmystimska'
 
 
 
