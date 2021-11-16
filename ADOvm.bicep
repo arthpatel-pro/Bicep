@@ -60,7 +60,7 @@ resource vm 'Microsoft.Compute/virtualMachines@2021-03-01' = {
 }
 
 resource vmName_TeamServicesAgent 'Microsoft.Compute/virtualMachines/extensions@2015-06-15' = {
-  name: '${vmname}/TeamServicesAgent'
+  name: 'TeamServicesAgent'
   location: resourceGroup().location
   parent: vm
   properties: {
