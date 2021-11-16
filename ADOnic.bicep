@@ -9,7 +9,26 @@ resource nicnsg 'Microsoft.Network/networkSecurityGroups@2021-02-01' = {
   location:resourceGroup().location
   properties: {
     securityRules: [
-      
+      {
+        name: 'default-allow-rdp'
+        properties: {
+          protocol: '*'
+          sourcePortRange: '*'
+          destinationPortRange: '3389'
+          destinationAddressPrefix: '*'
+          access: 'Allow'
+          priority: 1000
+          direction: 'Inbound'
+          sourcePortRanges: []
+          destinationPortRanges: []
+          sourceAddressPrefixes: [
+            '122.182.14.98'
+            '111.93.95.94'
+            '115.119.250.30'
+          ]
+          destinationAddressPrefixes: []
+        }
+      }
     ]
   }
 }
