@@ -10,7 +10,7 @@ param VSTSAccountUrl string = 'https://dev.azure.com/Ani007'
 param TeamProject string = 'HTTP to Https redirection testing'
 param DeploymentGroup string = 'Testing'
 param AgentName string = ''
-param PATToken string = 'ggzgth3mm7qhk3o7ypubgtqqlut5vk7xbgitqlyuzowmystimska'
+param PATToken string = 'INSERT PAT'
 param Tags string = 'ADO-VM'
 
 
