@@ -1,7 +1,8 @@
-param vnetname string = 'Bicep-Testvnet'
-param addressprefix string = '192.168.1.0/24'
-param subnetname string = 'Bicep-Testvnet-sub1'
-param subnwt1add string = '192.168.1.0/26'
+param vnetname string
+param addressprefix string
+param subnetname string
+param subnwt1add string
+
 
 resource vnet 'Microsoft.Network/virtualNetworks@2021-02-01' = {
   name : vnetname
