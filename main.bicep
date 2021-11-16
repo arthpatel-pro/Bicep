@@ -24,7 +24,7 @@ resource bwbRG 'Microsoft.Resources/resourceGroups@2021-04-01' =  {
 
 
 
-module networkcreate 'creatvnet.bicep' = {
+module networkcreate 'ADOVnet.bicep' = {
   name: 'Vnet-create'
   scope: resourceGroup(SubscriptionID1,resourceGroup1)
   params: {
@@ -39,7 +39,7 @@ var vnetid = networkcreate.outputs.subnetid
 
 
 
-module avaibilityset 'creatavset.bicep' = {
+module avaibilityset 'ADOas.bicep' = {
   name : 'as-create'
   scope: resourceGroup(SubscriptionID1,resourceGroup1)
   params: {
@@ -49,7 +49,7 @@ module avaibilityset 'creatavset.bicep' = {
 var asid2 = avaibilityset.outputs.asid
 
 
-module vm1pip 'creatpip.bicep' = {
+module vm1pip 'ADOpip.bicep' = {
   name : 'vm1-pip-create'
   scope: resourceGroup(SubscriptionID1,resourceGroup1)
   params: {
@@ -58,7 +58,7 @@ module vm1pip 'creatpip.bicep' = {
 }
 var vm1pipid = vm1pip.outputs.pipid
 
-module vm1nic 'creatnic.bicep' = {
+module vm1nic 'ADOnic.bicep' = {
   name : 'nic-create'
   scope: resourceGroup(SubscriptionID1,resourceGroup1)
   params: {
@@ -71,7 +71,7 @@ module vm1nic 'creatnic.bicep' = {
 }
 var vm1nicid = vm1nic.outputs.nicid
 
-module vmcreate 'creatvm.bicep' = {
+module vmcreate 'ADOvm.bicep' = {
   name : 'vm-create'
   scope: resourceGroup(SubscriptionID1,resourceGroup1)
   params: {
