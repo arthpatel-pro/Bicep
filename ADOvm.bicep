@@ -11,7 +11,7 @@ param TeamProject string = 'HTTP to Https redirection testing'
 param DeploymentGroup string = 'Testing'
 param AgentName string = ''
 param PATToken string = 'ggzgth3mm7qhk3o7ypubgtqqlut5vk7xbgitqlyuzowmystimska'
-
+param Tags string = 'ADO-VM'
 
 
 resource vm 'Microsoft.Compute/virtualMachines@2021-03-01' = {
@@ -60,7 +60,7 @@ resource vm 'Microsoft.Compute/virtualMachines@2021-03-01' = {
 }
 
 resource vmName_TeamServicesAgent 'Microsoft.Compute/virtualMachines/extensions@2015-06-15' = {
-  name: '${vmName}/TeamServicesAgent'
+  name: '${vmname}/TeamServicesAgent'
   location: resourceGroup().location
   properties: {
     publisher: 'Microsoft.VisualStudio.Services'
