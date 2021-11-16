@@ -7,6 +7,10 @@ param addressprefix string = '192.168.1.0/24'
 param subnetname string = 'Bicep-vnet-sub1'
 param subnwt1add string = '192.168.1.0/26'
 
+param vm1diskname string = 'Bicep-vm1-osdisk' 
+param  disksku string = 'Standard_LRS'
+param ostype string = 'Windows'
+
 param asname string = 'bicep-as'
 
 param vm1publicip string = 'bicep-vm1-pip'
