@@ -1,3 +1,4 @@
+targetScope = 'subscription'
 param resourceGroup1 string = 'ADO'
 param SubscriptionID1 string = 'cf10f7d1-3197-497c-a41b-a2a862604862'
 
