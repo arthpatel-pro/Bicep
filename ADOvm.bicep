@@ -13,7 +13,7 @@ param AgentName string = ''
 param PATToken string = 'INSERT PAT'
 param Tags string = 'ADO-VM'
 
-@secure
+@secure()
 param adminUsername string = 'arth'
 
 
