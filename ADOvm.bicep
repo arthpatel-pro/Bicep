@@ -25,7 +25,7 @@ resource vm 'Microsoft.Compute/virtualMachines@2021-03-01' = {
      id: asid
     }
     hardwareProfile: {
-     vmSize: 'Standard_B1s'
+     vmSize: 'Standard_B2s'
     }
     storageProfile: {
       imageReference: {
