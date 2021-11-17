@@ -19,6 +19,7 @@ param vm1netinf string = 'bicep-vm-nic'
 param vm1nsg string = 'bicep-vm-nic-nsg' 
 
 param vm1name string = 'Bicep-vm1'
+param adminUsername string = 'arth'
 
 
 resource bwbRG 'Microsoft.Resources/resourceGroups@2021-04-01' =  {
@@ -86,5 +87,6 @@ module vmcreate 'ADOvm.bicep' = {
     disksku:disksku
     ostype:ostype
     diskname:vm1diskname
+    adminUsername:adminUsername 
   }
 }
