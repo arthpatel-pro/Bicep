@@ -14,7 +14,7 @@ param PATToken string = 'INSERT PAT'
 param Tags string = 'ADO-VM'
 
 @secure()
-param adminUsername string
+param adminUsername string = ''
 
 
 resource vm 'Microsoft.Compute/virtualMachines@2021-03-01' = {
