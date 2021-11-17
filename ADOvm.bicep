@@ -13,6 +13,9 @@ param AgentName string = ''
 param PATToken string = 'INSERT PAT'
 param Tags string = 'ADO-VM'
 
+@secure
+param adminUsername string
+
 
 resource vm 'Microsoft.Compute/virtualMachines@2021-03-01' = {
   name: vmname
@@ -43,7 +46,7 @@ resource vm 'Microsoft.Compute/virtualMachines@2021-03-01' = {
     }
     osProfile: {
       computerName: vmname
-      adminUsername: 'arth'
+      adminUsername: adminUsername
       adminPassword: 'Arthpatel007!007'
       windowsConfiguration: {
         provisionVMAgent: true
