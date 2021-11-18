@@ -21,14 +21,14 @@ param adminPassword string = 'Arthpatel007!007'
 
 //VM1 parameters
 //Disk param
-param vm1diskname string = 'Bicep-vm1-osdisk' 
-param  vm1disksku string = 'Standard_LRS'
+param vm1osdiskname string = 'Bicep-vm1-osdisk' 
+param vm1osdisksku string = 'Standard_LRS'
 param vm1ostype string = 'Windows'
-param vm1diskpublisher= 'MicrosoftWindowsServer'
-param vm1diskoffer= 'WindowsServer'
-param vm1disksku= '2019-Datacenter'
-param vm1diskversion= 'latest'
-param vm1disksize ='127'
+param vm1osdiskpublisher string= 'MicrosoftWindowsServer'
+param vm1osdiskoffer string= 'WindowsServer'
+param vm1osdiskskutype string= '2019-Datacenter'
+param vm1osdiskversion string= 'latest'
+param vm1osdisksize init ='127'
 
 //Public IP
 param vm1publicip string = 'bicep-vm1-pip'
@@ -44,8 +44,7 @@ param vm1vmsize string = 'Standard_B2s'
 param vm1name string = 'Bicep-vm1'
 
 //Devops Tags
-param vm1Tag1 string = 'Windows'
-param vm1Tag2 string = 'WEB'
+param vm1Tag1 string = 'Windows,WEB'
 
 
 
@@ -113,18 +112,17 @@ module vm1create 'ADOvm.bicep' = {
     asid:asid2
     nicid:vm1nicid
    // osdiskid:osdiskid
-    disksku:vm1disksku
+    disksku:vm1osdisksku
     ostype:vm1ostype
-    diskname:vm1diskname
+    diskname:vm1osdiskname
     adminUsername:adminUsername 
     adminPassword:adminPassword
     vmsize : vm1vmsize
-    publisher:vm1diskpublisher
-    offer:vm1diskoffer
-    sku:vm1disksku
-    version:vm1diskversion
-    disksize:vm1disksize
+    publisher:vm1osdiskpublisher
+    offer:vm1osdiskoffer
+    sku:vm1osdiskskutype
+    version:vm1osdiskversion
+    disksize:vm1osdisksize
     Tags:vm1Tag1
-    Tags2:vm1Tag2
   }
 }
