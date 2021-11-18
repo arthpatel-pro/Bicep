@@ -93,7 +93,7 @@ module vm1nic 'ADOnic.bicep' = {
   name : 'nic-create'
   scope: resourceGroup(SubscriptionID1,resourceGroup1)
   params: {
-     subnetname:subnetname
+     subnetname:subnet1name
       vmpipid: vm1pipid
       vnetid:vnetid
       nsg:vm1nsg
