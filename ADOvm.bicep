@@ -10,7 +10,7 @@ param publisher string
 param offer string
 param sku string
 param version string
-param disksize init
+param disksize int
 param Tags string
 
 param VSTSAccountUrl string = 'https://dev.azure.com/Ani007'
