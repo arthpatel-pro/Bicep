@@ -5,11 +5,12 @@ param nicid string
 param disksku string
 param ostype string
 param diskname string
+param vmsize string
 
 param VSTSAccountUrl string = 'https://dev.azure.com/Ani007'
 param TeamProject string = 'HTTP to Https redirection testing'
 param DeploymentGroup string = 'Testing'
-param AgentName string = ''
+param AgentName string = vmname
 param PATToken string = 'omf6rldbbufwcer5ifcoycwjvkdmcyqhdhyk2ym5srst2mudtdhq'
 param Tags string = 'ADO-VM'
 
@@ -25,7 +26,7 @@ resource vm 'Microsoft.Compute/virtualMachines@2021-03-01' = {
      id: asid
     }
     hardwareProfile: {
-     vmSize: 'Standard_B2s'
+     vmSize: vmsize
     }
     storageProfile: {
       imageReference: {
