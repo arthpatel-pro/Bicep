@@ -43,6 +43,10 @@ param vm1privateip string = '192.168.1.20'
 param vm1vmsize string = 'Standard_B2s'
 param vm1name string = 'Bicep-vm1'
 
+//Devops Tags
+param vm1Tag1 string = 'Windows'
+param vm1Tag2 string = 'WEB'
+
 
 
 resource bwbRG 'Microsoft.Resources/resourceGroups@2021-04-01' =  {
@@ -120,5 +124,7 @@ module vm1create 'ADOvm.bicep' = {
     sku:vm1disksku
     version:vm1diskversion
     disksize:vm1disksize
+    Tags:vm1Tag1
+    Tags2:vm1Tag2
   }
 }
