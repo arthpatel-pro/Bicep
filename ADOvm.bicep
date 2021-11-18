@@ -10,9 +10,8 @@ param publisher string
 param offer string
 param sku string
 param version string
-param disksize string
+param disksize init
 param Tags string
-param Tags2 string
 
 param VSTSAccountUrl string = 'https://dev.azure.com/Ani007'
 param TeamProject string = 'HTTP to Https redirection testing'
@@ -86,7 +85,6 @@ resource vmName_TeamServicesAgent 'Microsoft.Compute/virtualMachines/extensions@
       DeploymentGroup: DeploymentGroup
       AgentName: AgentName
       Tags: Tags
-      Tags: Tags2
     }
     protectedSettings: {
       PATToken: PATToken
