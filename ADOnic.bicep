@@ -1,6 +1,7 @@
-param vm1pipid string
+param vmpipid string
 param subnetname string
 param vnetid string
+param privateip string
 param netinf string 
 param nsg string 
 
@@ -41,10 +42,10 @@ resource nic 'Microsoft.Network/networkInterfaces@2021-02-01' = {
        {
          name: 'bicep-vm-private-ip'
           properties: {
-            privateIPAddress: '192.168.1.20'
+            privateIPAddress: privateip
            privateIPAllocationMethod: 'Static'
            publicIPAddress: {
-             id : vm1pipid
+             id : vmpipid
            }
            subnet: {
              id : '${vnetid}/subnets/${subnetname}'
