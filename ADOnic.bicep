@@ -4,6 +4,7 @@ param vnetid string
 param privateip string
 param netinf string 
 param nsg string 
+param privateipname string
 
 resource nicnsg 'Microsoft.Network/networkSecurityGroups@2021-02-01' = {
   name: nsg
@@ -40,7 +41,7 @@ resource nic 'Microsoft.Network/networkInterfaces@2021-02-01' = {
   properties: {
     ipConfigurations: [
        {
-         name: 'bicep-vm-private-ip'
+         name: privateipname
           properties: {
             privateIPAddress: privateip
            privateIPAllocationMethod: 'Static'
