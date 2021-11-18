@@ -28,7 +28,7 @@ param vm1osdiskpublisher string= 'MicrosoftWindowsServer'
 param vm1osdiskoffer string= 'WindowsServer'
 param vm1osdiskskutype string= '2019-Datacenter'
 param vm1osdiskversion string= 'latest'
-param vm1osdisksize init ='127'
+param vm1osdisksize int ='127'
 
 //Public IP
 param vm1publicip string = 'bicep-vm1-pip'
