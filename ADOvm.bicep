@@ -6,6 +6,11 @@ param disksku string
 param ostype string
 param diskname string
 param vmsize string
+param publisher string
+param offer string
+param sku string
+param version string
+param disksize string
 
 param VSTSAccountUrl string = 'https://dev.azure.com/Ani007'
 param TeamProject string = 'HTTP to Https redirection testing'
@@ -16,6 +21,7 @@ param Tags string = 'ADO-VM'
 
 @secure()
 param adminUsername string
+param adminPassword string
 
 
 resource vm 'Microsoft.Compute/virtualMachines@2021-03-01' = {
@@ -30,10 +36,10 @@ resource vm 'Microsoft.Compute/virtualMachines@2021-03-01' = {
     }
     storageProfile: {
       imageReference: {
-        publisher: 'MicrosoftWindowsServer'
-        offer: 'WindowsServer'
-        sku: '2019-Datacenter'
-        version: 'latest'
+        publisher: publisher
+        offer: offer
+        sku: sku
+        version: version
       }
       osDisk: {
         osType: ostype
@@ -42,13 +48,13 @@ resource vm 'Microsoft.Compute/virtualMachines@2021-03-01' = {
         managedDisk: {
            storageAccountType: disksku
         }
-        diskSizeGB:127
+        diskSizeGB:disksize
       }
     }
     osProfile: {
       computerName: vmname
       adminUsername: adminUsername
-      adminPassword: 'Arthpatel007!007'
+      adminPassword: adminPassword
       windowsConfiguration: {
         provisionVMAgent: true
       }
