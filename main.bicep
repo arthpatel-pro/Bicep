@@ -17,6 +17,8 @@ param vm1publicip string = 'bicep-vm1-pip'
 
 param vm1netinf string = 'bicep-vm-nic'
 param vm1nsg string = 'bicep-vm-nic-nsg' 
+param vm1privateip string = '192.168.1.20'
+param vm1vmsize string = 'Standard_B2s'
 
 param vm1name string = 'Bicep-vm1'
 param adminUsername string = 'arth'
@@ -68,10 +70,11 @@ module vm1nic 'ADOnic.bicep' = {
   scope: resourceGroup(SubscriptionID1,resourceGroup1)
   params: {
      subnetname:subnetname
-      vm1pipid: vm1pipid
+      vmpipid: vm1pipid
       vnetid:vnetid
       nsg:vm1nsg
       netinf:vm1netinf
+      privateip:vm1privateip
   }
 }
 var vm1nicid = vm1nic.outputs.nicid
@@ -88,5 +91,6 @@ module vmcreate 'ADOvm.bicep' = {
     ostype:ostype
     diskname:vm1diskname
     adminUsername:adminUsername 
+    vmsize : vm1vmsize
   }
 }
