@@ -1,7 +1,7 @@
 param vnetname string
 param addressprefix string
 param subnetname string
-param subnwt1add string
+param subnwtadd string
 
 
 resource vnet 'Microsoft.Network/virtualNetworks@2021-02-01' = {
@@ -18,7 +18,7 @@ resource vnet 'Microsoft.Network/virtualNetworks@2021-02-01' = {
     {
       name:subnetname
       properties: {
-        addressPrefix:subnwt1add
+        addressPrefix:subnwtadd
         privateEndpointNetworkPolicies: 'Enabled'
         privateLinkServiceNetworkPolicies: 'Enabled'
       }
