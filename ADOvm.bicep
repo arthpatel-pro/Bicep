@@ -17,7 +17,7 @@ param VSTSAccountUrl string = 'https://dev.azure.com/Ani007'
 param TeamProject string = 'HTTP to Https redirection testing'
 param DeploymentGroup string = 'Testing'
 param AgentName string = vmname
-param PATToken string = 'omf6rldbbufwcer5ifcoycwjvkdmcyqhdhyk2ym5srst2mudtdhq'
+param PATToken string = 'ga3yks4q5bsjd24l32cqxpjvwinwgxrvfz37knrszalwy47fvlaq'
  
 
 @secure()
