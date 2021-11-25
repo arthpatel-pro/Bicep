@@ -80,6 +80,7 @@ module avaibilityset 'ADOas.bicep' = {
 var asid2 = avaibilityset.outputs.asid
 
 
+
 module vm1pip 'ADOpip.bicep' = {
   name : 'vm1-pip-create'
   scope: resourceGroup(SubscriptionID1,resourceGroup1)
