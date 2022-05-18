@@ -12,8 +12,8 @@ variables:
 #  resourceGroupName: 'ADO'
 #  location: 'ADO'
   templateFile: './main.bicep'
-pool:
-  vmImage: $(vmImageName)
+pool: office-Laptop
+#  vmImage: $(vmImageName)
 
 steps:
 - task: AzureCLI@2
