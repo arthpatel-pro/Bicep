@@ -8,9 +8,9 @@ trigger: none
 variables:
   vmImageName: 'ubuntu-latest'
 
-  azureServiceConnection: 'ADO'
-  resourceGroupName: 'ADO'
-  location: 'ADO'
+  azureServiceConnection: 'Horizontal free sub'
+#  resourceGroupName: 'ADO'
+#  location: 'ADO'
   templateFile: './main.bicep'
 pool:
   vmImage: $(vmImageName)
