@@ -13,11 +13,11 @@ param version string
 param disksize int
 param Tags string
 
-param VSTSAccountUrl string = 'https://dev.azure.com/Ani007'
-param TeamProject string = 'HTTP to Https redirection testing'
+param VSTSAccountUrl string = 'https://dev.azure.com/IAC-Bicep'
+param TeamProject string = 'Deploy VM'
 param DeploymentGroup string = 'Testing'
 param AgentName string = vmname
-param PATToken string = 'ga3yks4q5bsjd24l32cqxpjvwinwgxrvfz37knrszalwy47fvlaq'
+param PATToken string = 'bnyxodmny7twkizwcoocrbzexpcmfkvmkl3hqissrgnie5csytnq'
  
 
 @secure()
