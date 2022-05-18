@@ -1,7 +1,7 @@
 //SubScription and RG settings
 targetScope = 'subscription'
-param resourceGroup1 string = 'ADO'
-param SubscriptionID1 string = 'cf10f7d1-3197-497c-a41b-a2a862604862'
+param resourceGroup1 string = 'Arth_Practice'
+param SubscriptionID1 string = 'd1d9f15f-e441-4343-a4e5-b0c262beb066'
 
 
 //General param
