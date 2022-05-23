@@ -17,7 +17,7 @@ param VSTSAccountUrl string = 'https://dev.azure.com/IAC-Bicep'
 param TeamProject string = 'Deploy VM'
 param DeploymentGroup string = 'Testing'
 param AgentName string = vmname
-param PATToken string = 'bnyxodmny7twkizwcoocrbzexpcmfkvmkl3hqissrgnie5csytnq'
+param PATToken string = 'aqknukzzinjz6lh7h2soqlvqh44vj3znygdky3n2sqspeeluipiq'
  
 
 @secure()
